@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>US Fire Administration Fire Statistics</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-<!--     		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/more">More</a></li>
-    		</ul> -->
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Visualizations</h1>
-			<p>The dataset is from the <em>US Fire Administration Fire Statistics</em> on data.gov <a href="/more">See more data about fire service...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="https://catalog.data.gov/dataset/us-fire-administration-fire-statistics">data.gov</a></li>
-		</ul>
-		</footer>
-	</body>
+<head>
+	<title>US Fire Administration Fire Statistics</title>
+	<!-- link to main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+	<nav>
+<!--     	<ul>
+        	<li><a href="/">Home</a></li>
+	        <li><a href="/more">More</a></li>
+    	</ul> -->
+	</nav>
+	<div class="container">
+    	<div class="blurb">
+        	<h1>Visualizations</h1>
+		<p>The dataset is from the <em>US Fire Administration Fire Statistics</em> on data.gov <a href="/more">See more data about fire service...</a></p>
+    	</div><!-- /.blurb -->
+	</div><!-- /.container -->
+	<footer>
+    	<ul>
+        	<li><a href="https://catalog.data.gov/dataset/us-fire-administration-fire-statistics">data.gov</a></li>
+	</ul>
+	</footer>
+</body>
+	
 <div id="observablehq-causechart-b733dd8e"></div>
 <p>Credit: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">US Fire Stats by shuyi-liu</a></p>
 
 <script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "causechart") return new Inspector(document.querySelector("#observablehq-causechart-b733dd8e"));
-});
-</script>
-	
-<div id="observablehq-statement-abfd64b5"></div>
-<p>Credit: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">US Fire Stats by shuyi-liu</a></p>
-
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "statement") return new Inspector(document.querySelector("#observablehq-statement-abfd64b5"));
-});
+	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+	import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
+	new Runtime().module(define, name => {
+		if (name === "causechart") return new Inspector(document.querySelector("#observablehq-causechart-b733dd8e"));
+	});
 </script>
 	
 <div id="observablehq-hydrantmap-b733dd8e"></div>
 <p>Credit: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">US Fire Stats by shuyi-liu</a></p>
 
 <script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "hydrantmap") return new Inspector(document.querySelector("#observablehq-hydrantmap-b733dd8e"));
-});
+	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+	import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
+	new Runtime().module(define, name => {
+  		if (name === "hydrantmap") return new Inspector(document.querySelector("#observablehq-hydrantmap-b733dd8e"));
+	});
 </script>
 	
 </html>
