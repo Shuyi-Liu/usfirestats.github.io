@@ -34,4 +34,16 @@ new Runtime().module(define, name => {
   if (name === "causechart") return new Inspector(document.querySelector("#observablehq-causechart-b733dd8e"));
 });
 </script>
+	
+<div id="observablehq-hydrantmap-b733dd8e"></div>
+<p>Credit: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">US Fire Stats by shuyi-liu</a></p>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "hydrantmap") return new Inspector(document.querySelector("#observablehq-hydrantmap-b733dd8e"));
+});
+</script>
+	
 </html>
