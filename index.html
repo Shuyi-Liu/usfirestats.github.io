@@ -5,7 +5,7 @@
 	<!-- link to main stylesheet -->
 <!-- 	<link rel="stylesheet" type="text/css" href="/css/main.css"> -->
 </head>
-<body>
+<!-- <body>
 	<nav>
 <!--     	<ul>
         	<li><a href="/">Home</a></li>
@@ -44,6 +44,15 @@
 	new Runtime().module(define, name => {
   		if (name === "hydrantmap") return new Inspector(document.querySelector("#observablehq-hydrantmap-b733dd8e"));
 	});
+</script> -->
+
+<div id="observablehq-be8ef978"></div>
+<p>Credit: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">Visualization on US Fire Administration Fire Statistics by shuyi-liu</a></p>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
+new Runtime().module(define, Inspector.into("#observablehq-be8ef978"));
 </script>
 	
 </html>
