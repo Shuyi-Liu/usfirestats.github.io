@@ -49,9 +49,7 @@
 	</script>
 	
 	<h3>Chart 3: Exploring Cause of Death, Nature of Death with Filter</h3>
-	<p>When Selecting an incident property type, the upper chart will show the causes relevance.
-	<br>The property type chart has a tooptip.
-	</p>
+	<p>When selecting an incident property type, the upper chart will show the causes relevance.</p>
 	<div id="vis" align="center"></div>
 	
     	<script type="text/javascript">
@@ -137,7 +135,7 @@
 			  "vconcat": [
 			    {
 			      "width": 480,
-			      "mark": {"type": "bar"},
+			      "mark": {"type": "bar", "tooltip": true},
 			      "encoding": {
 				"x": {
 				  "field": "InstallDate",
