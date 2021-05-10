@@ -36,7 +36,7 @@
 	});
 	</script>
 	
-	<h3>Chart 2: Cause of Death VS Nature of Death</h3>
+	<h3>Chart 2: Cause of Death vs Nature of Death</h3>
 	<p>This chart compares the relevance of firefighters’ cause of death and nature of death.</p>
 	<div id="observablehq-causechart-0efa0908" align="center"></div>
 	
@@ -48,9 +48,10 @@
 	});
 	</script>
 	
-	<h3>Chart 3: Exploring Cause of Death, Nature of Death with Filter</h3>
-	<p>When selecting an incident property type, the upper chart will show the causes relevance.</p>
-	<div id="vis" align="center"></div>
+	<h3>Chart 3: Filtering Causes</h3>
+	<p>When selecting an incident property type, the upper chart will show the relevance of the causes of that type.</p>
+	<div align="center">
+	<div id="vis"></div>
 	
     	<script type="text/javascript">
 		var yourVlSpec =
@@ -118,6 +119,7 @@
 			};
 		vegaEmbed('#vis', yourVlSpec);
 	</script>
+	</div>
 	
 	<h3>Chart 4: Overview and Detail on Installed Hydrants by Year/Date</h3>
 	<p>This dynamic chart shows the number of installed hydrants by years.
