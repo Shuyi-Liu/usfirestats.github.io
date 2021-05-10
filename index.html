@@ -54,5 +54,81 @@ import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/run
 import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
 new Runtime().module(define, Inspector.into("#observablehq-be8ef978"));
 </script>
+
+<head>
+    <title>Embedding Vega-Lite</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  </head>
+  <body>
+    <div id="vis"></div>
+
+    <script type="text/javascript">
+      var yourVlSpec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A dashboard with cross-highlighting.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Shuyi-Liu/usfirestats.github.io/main/ff_data.csv"
+  },
+  "vconcat": [
+    {
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "x": {
+              "field": "Nature_of_death",
+              "type": "ordinal",
+              "axis": {"labelAngle": -40}
+            },
+            "y": {"field": "Cause_of_death", "type": "ordinal"},
+            "color": {
+              "aggregate": "count",
+              "legend": {
+                "title": "All Count",
+                "direction": "horizontal",
+                "gradientLength": 120
+              }
+            }
+          }
+        },
+        {
+          "transform": [{"filter": {"param": "pts"}}],
+          "mark": "point",
+          "encoding": {
+            "x": {"field": "Nature_of_death", "type": "ordinal"},
+            "y": {"field": "Cause_of_death", "type": "ordinal"},
+            "size": {
+              "aggregate": "count",
+              "legend": {"title": "Selected Category Count"}
+            },
+            "color": {"value": "#666"}
+          }
+        }
+      ]
+    },
+    {
+      "width": 330,
+      "height": 120,
+      "mark": "bar",
+      "params": [
+        {"name": "pts", "select": {"type": "point", "encodings": ["x"]}}
+      ],
+      "encoding": {
+        "x": {"field": "Property_type", "axis": {"labelAngle": -40}},
+        "y": {"aggregate": "count"},
+        "color": {
+          "condition": {"param": "pts", "value": "steelblue"},
+          "value": "grey"
+        }
+      }
+    }
+  ],
+  "resolve": {"legend": {"color": "independent", "size": "independent"}}
+};
+      vegaEmbed('#vis', yourVlSpec);
+    </script>
+  </body>
 	
 </html>
