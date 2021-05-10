@@ -19,11 +19,32 @@
     	<div class="blurb">
         	<h2>Visualization on US Fire Administration Fire Statistics</h2>
 		<p>The dataset is from the <em>US Fire Administration Fire Statistics</em> on <a href="https://catalog.data.gov/dataset/us-fire-administration-fire-statistics">data.gov</a></p>
-		<p>See Observable notebook: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">US Fire Stats by shuyi-liu</a></p>
+		<p>See Observable notebook: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">Visualization on US Fire Administration Fire Statistics by shuyi-liu</a></p>
     	</div><!-- /.blurb -->
  	</div><!-- /.container -->
 	
+	<div id="observablehq-agechart-af93bb0d"></div>
+
+	<script type="module">
+	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+	import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
+	new Runtime().module(define, name => {
+	  if (name === "agechart") return new Inspector(document.querySelector("#observablehq-agechart-af93bb0d"));
+	});
+	</script>
+	
+	<div id="observablehq-causechart-0efa0908"></div>
+
+	<script type="module">
+	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+	import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
+	new Runtime().module(define, name => {
+	  if (name === "causechart") return new Inspector(document.querySelector("#observablehq-causechart-0efa0908"));
+	});
+	</script>
+	
 	<div id="vis">
+	
     	<script type="text/javascript">
 		var yourVlSpec =
 		    {
@@ -47,7 +68,7 @@
 				    "color": {
 				      "aggregate": "count",
 				      "legend": {
-					"title": "All Count",
+					"title": "Count of Records",
 					"direction": "horizontal",
 					"gradientLength": 120
 				      }
