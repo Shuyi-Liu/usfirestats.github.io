@@ -123,7 +123,8 @@
 	<p>This dynamic chart shows the number of installed hydrants by years.
 	<br>When brushing part of the lower chart, the upper chart will zoom in on the timeline and show Months.
 	</p>
-	<div id="vis2" align="center"></div>
+	<div align="center">
+	<div id="vis2"></div>
 	
 	<script type="text/javascript">
 		var yourVlSpec2 = 
@@ -135,7 +136,7 @@
 			  "vconcat": [
 			    {
 			      "width": 480,
-			      "mark": {"type": "bar", "tooltip": true},
+			      "mark": "bar",
 			      "encoding": {
 				"x": {
 				  "field": "InstallDate",
@@ -149,7 +150,7 @@
 			    {
 			      "width": 480,
 			      "height": 60,
-			      "mark": "bar",
+			      "mark": {"type": "bar", "tooltip": true},
 			      "params": [
 				{"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}
 			      ],
@@ -166,6 +167,6 @@
 			};
 		vegaEmbed('#vis2', yourVlSpec2);
 	</script>
-	
+	</div>
 </body>
 </html>
