@@ -15,13 +15,14 @@
 	        <li><a href="/more">More</a></li>
     	</ul> 
 	</nav> -->
-	<div class="container">
-    	<div class="blurb">
+<!-- 	<div class="container">
+    	<div class="blurb"> -->
         	<h2>Visualization on US Fire Administration Fire Statistics</h2>
-		<p>The dataset is from <em>US Fire Administration Fire Statistics </em>on <a href="https://catalog.data.gov/dataset/us-fire-administration-fire-statistics">data.gov</a></p>
+		<p>The datasets are from <a href="https://catalog.data.gov/dataset/us-fire-administration-fire-statistics">US Fire Administration Fire Statistics </a>
+			and <a href="https://catalog.data.gov/dataset/fire-hydrants">Fire Hydrants</a>.</p>
 		<p>See Observable notebook: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">Visualization on US Fire Administration Fire Statistics by shuyi-liu</a></p>
-    	</div><!-- /.blurb -->
- 	</div><!-- /.container -->
+<!--     	</div><!-- /.blurb -->
+<!--  	</div>/.container -->
 	
 	<h3>Chart 1: Age Distribution of Fallen Firefighters</h3>
 	<p>This chart shows the distribution of fallen firefighters by their ages with a tooltip.</p>
@@ -170,5 +171,19 @@
 		vegaEmbed('#vis2', yourVlSpec2);
 	</script>
 	</div>
+	
+	<h3>Chart 5: Map of Lake County Public Works Water Department fire hydrants</h3>
+	<p>The map shows the fire hydrants belonging to different water systems that are distinguished by color.</p>
+	<div align="center">
+	<div id="observablehq-hydrantmap-dc9662cd"></div>
+
+
+	<script type="module">
+	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+	import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
+	new Runtime().module(define, name => {
+	  if (name === "hydrantmap") return new Inspector(document.querySelector("#observablehq-hydrantmap-dc9662cd"));
+	});
+	</script>
 </body>
 </html>
