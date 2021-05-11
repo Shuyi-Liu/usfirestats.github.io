@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>US Fire Administration Fire Statistics</title>
+	<title>Fire Statistics Visualizations</title>
 	<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
    	<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     	<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
@@ -17,14 +17,14 @@
 	</nav> -->
 <!-- 	<div class="container">
     	<div class="blurb"> -->
-        	<h2>Visualization on US Fire Administration Fire Statistics</h2>
+        	<h2>Visualizations on US Fire Administration Fire Statistics</h2>
 		<p>The datasets are from <a href="https://catalog.data.gov/dataset/us-fire-administration-fire-statistics">US Fire Administration Fire Statistics</a> and <a href="https://catalog.data.gov/dataset/fire-hydrants">Fire Hydrants</a>.</p>
 		<p>See Observable notebook: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">Visualization on US Fire Administration Fire Statistics by shuyi-liu</a></p>
 <!--     	</div><!-- /.blurb -->
 <!--  	</div>/.container -->
 	
-	<h3>Chart 1: Age Distribution of Fallen Firefighters</h3>
-	<p>This chart shows the distribution of fallen firefighters by their ages with a tooltip.</p>
+	<p><b>Chart 1: Age Distribution of Fallen Firefighters</b>
+	<br>This chart shows the distribution of fallen firefighters by their ages with a tooltip.</p>
 	<div id="observablehq-agechart-af93bb0d" align="center"></div>
 	
 	
@@ -121,7 +121,21 @@
 	</script>
 	</div>
 	
-	<h3>Chart 4: Overview and Detail on Installed Hydrants by Year/Date</h3>
+	<h3>Chart 4: Selection</h3>
+	<p>When selecting <b>Emergenty</b> and <b>Duty<b> type, the chart will show the relevance of that categories.</p>
+	<div align="center">
+	<div id="observablehq-selectchart-b86a0d9e"></div>
+
+
+	<script type="module">
+	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+	import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
+	new Runtime().module(define, name => {
+	  if (name === "selectchart") return new Inspector(document.querySelector("#observablehq-selectchart-b86a0d9e"));
+	});
+	</script>
+	
+	<h3>Chart 5: Overview and Detail on Installed Hydrants by Year/Date</h3>
 	<p>This dynamic chart shows the number of installed hydrants by years.
 	<br>When brushing part of the lower chart, the upper chart will zoom in on the timeline and show Months.
 	</p>
