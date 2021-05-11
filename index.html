@@ -17,16 +17,18 @@
 	</nav> -->
 <!-- 	<div class="container">
     	<div class="blurb"> -->
+	<div align="center">
         	<h2>Visualizations on US Fire Administration Fire Statistics</h2>
 		<p>The datasets are from <a href="https://catalog.data.gov/dataset/us-fire-administration-fire-statistics">US Fire Administration Fire Statistics</a> and <a href="https://catalog.data.gov/dataset/fire-hydrants">Fire Hydrants</a>.</p>
 		<p>See Observable notebook: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">Visualization on US Fire Administration Fire Statistics by shuyi-liu</a></p>
 <!--     	</div><!-- /.blurb -->
 <!--  	</div>/.container -->
 	
-	<p><b>Chart 1: Age Distribution of Fallen Firefighters</b>
-	<br>This chart shows the distribution of fallen firefighters by their ages with a tooltip.</p>
+	<p>
+		<b>Chart 1: Age Distribution of Fallen Firefighters</b>
+	<br>This chart shows the distribution of fallen firefighters by their ages with a tooltip.
+	</p>
 	<div id="observablehq-agechart-af93bb0d" align="center"></div>
-	
 	
 	<script type="module">
 	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -36,8 +38,10 @@
 	});
 	</script>
 	
-	<h3>Chart 2: Cause of Death vs Nature of Death</h3>
-	<p>This chart compares the relevance of firefighters’ cause of death and nature of death.</p>
+	<p>
+		<b>Chart 2: Cause of Death vs Nature of Death</b>
+	<br>This chart compares the relevance of firefighters’ cause of death and nature of death.
+	</p>
 	<div id="observablehq-causechart-0efa0908" align="center"></div>
 	
 	<script type="module">
@@ -48,9 +52,10 @@
 	});
 	</script>
 	
-	<h3>Chart 3: Filtering Causes</h3>
-	<p>When selecting an incident property type, the upper chart will show the relevance of the causes of that type.</p>
-	<div align="center">
+	<p>
+		<b>Chart 3: Filtering Causes</b>
+	<br>When selecting an incident property type, the upper chart will show the relevance of the causes of that type.
+	</p>
 	<div id="vis"></div>
 	
     	<script type="text/javascript">
@@ -119,13 +124,12 @@
 			};
 		vegaEmbed('#vis', yourVlSpec);
 	</script>
-	</div>
 	
-	<h3>Chart 4: Selection</h3>
-	<p>When selecting <b>Emergenty</b> and <b>Duty<b> type, the chart will show the relevance of that categories.</p>
-	<div align="center">
+	<p>
+		<b>Chart 4: Selection</b>
+	<br>When selecting <b>Emergenty</b> and <b>Duty</b> type, the chart will show the relevance of that categories.
+	</p>
 	<div id="observablehq-selectchart-b86a0d9e"></div>
-
 
 	<script type="module">
 	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -135,11 +139,11 @@
 	});
 	</script>
 	
-	<h3>Chart 5: Overview and Detail on Installed Hydrants by Year/Date</h3>
-	<p>This dynamic chart shows the number of installed hydrants by years.
+	<p>
+		<b>Chart 5: Overview and Detail on Installed Hydrants by Year/Date</b>
+	<br>This dynamic chart shows the number of installed hydrants by years.
 	<br>When brushing part of the lower chart, the upper chart will zoom in on the timeline and show Months.
 	</p>
-	<div align="center">
 	<div id="vis2"></div>
 	
 	<script type="text/javascript">
@@ -183,15 +187,13 @@
 			};
 		vegaEmbed('#vis2', yourVlSpec2);
 	</script>
-	</div>
 	
-	<h3>Chart 5: Map of Lake County Public Works Water Department fire hydrants</h3>
-	<p>The map shows the fire hydrants belonging to different water systems that are distinguished by color.</p>
+	<p>
+		<b>Chart 6: Map of Lake County Public Works Water Department fire hydrants</b>
+	<br>The map shows the fire hydrants belonging to different water systems that are distinguished by color.</p>
 	<p><b>You are selecting:</b></p>
 	<div id="hydrantsinfo"></div>
-	<div align="center">
 	<div id="observablehq-hydrantmap-dc9662cd"></div>
-
 
 	<script type="module">
 	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
