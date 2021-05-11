@@ -19,14 +19,18 @@
     	<div class="blurb"> -->
 	<div align="center">
         	<h2>Visualizations on US Fire Administration Fire Statistics</h2>
-		<p>The datasets are from <a href="https://catalog.data.gov/dataset/us-fire-administration-fire-statistics">US Fire Administration Fire Statistics</a> and <a href="https://catalog.data.gov/dataset/fire-hydrants">Fire Hydrants</a>.</p>
-		<p>See Observable notebook: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">Visualization on US Fire Administration Fire Statistics by shuyi-liu</a></p>
+		<p>The datasets are from <a href="https://catalog.data.gov/dataset/us-fire-administration-fire-statistics">
+			US Fire Administration Fire Statistics</a> and <a href="https://catalog.data.gov/dataset/fire-hydrants">Fire Hydrants</a>.
+		<br>See the exploration process and narrative notes on Observable: <a href="https://observablehq.com/@shuyi-liu/us-fire-stats">
+			@shuyi-liu/us-fire-stats</a>
+		<br>See html codes and other files on: <a href="https://github.com/Shuyi-Liu/usfirestats.github.io">
+			my GitHub repository</a></p>
 <!--     	</div><!-- /.blurb -->
 <!--  	</div>/.container -->
 	
 	<p>
 		<b>Chart 1: Age Distribution of Fallen Firefighters</b>
-	<br>This chart shows the distribution of fallen firefighters by their ages with a tooltip.
+	<br>Pre-generated chart with tooltip.
 	</p>
 	<div id="observablehq-agechart-af93bb0d" align="center"></div>
 	
@@ -40,7 +44,7 @@
 	
 	<p>
 		<b>Chart 2: Cause of Death vs Nature of Death</b>
-	<br>This chart compares the relevance of firefighters’ cause of death and nature of death.
+	<br>The chart shows the relevance of firefighters’ cause of death and nature of death.
 	</p>
 	<div id="observablehq-causechart-0efa0908" align="center"></div>
 	
@@ -53,8 +57,8 @@
 	</script>
 	
 	<p>
-		<b>Chart 3: Filtering Causes</b>
-	<br>When selecting an incident property type, the upper chart will show the relevance of the causes of that type.
+		<b>Chart 3: Interactive Charts</b>
+	<br>Select a <b>Property Type</b> in the lower chart, and the upper chart will display the relevance accordingly.
 	</p>
 	<div id="vis"></div>
 	
@@ -126,8 +130,8 @@
 	</script>
 	
 	<p>
-		<b>Chart 4: Selection</b>
-	<br>When selecting <b>Emergenty</b> and <b>Duty</b> type, the chart will show the relevance of that categories.
+		<b>Chart 4: Interactive Charts</b>
+	<br>Select <b>Emergenty</b> and <b>Duty</b> type in the lower chart, and the upper chart will display the relevance accordingly.
 	</p>
 	<div id="observablehq-selectchart-b86a0d9e"></div>
 
@@ -141,8 +145,7 @@
 	
 	<p>
 		<b>Chart 5: Overview and Detail on Installed Hydrants by Year/Date</b>
-	<br>This dynamic chart shows the number of installed hydrants by years.
-	<br>When brushing part of the lower chart, the upper chart will zoom in on the timeline and show Months.
+	<br>Brush the lower chart, and the upper chart will zoom in on the timeline and show months.
 	</p>
 	<div id="vis2"></div>
 	
@@ -189,10 +192,16 @@
 	</script>
 	
 	<p>
-		<b>Chart 6: Map of Lake County Public Works Water Department fire hydrants</b>
-	<br>The map shows the fire hydrants belonging to different water systems that are distinguished by color.</p>
-	<p><b>You are selecting:</b></p>
-	<div id="hydrantsinfo"></div>
+		<b>Chart 6: Map of Lake County Public Works Water Department Fire Hydrants</b>
+	<br>The fire hydrants belonging to different water systems are distinguished by color.
+	<br>The fire hydrants' information is displayed by moving mouse.
+	</p>
+	<p>
+		<b>You are selecting:</b>
+		<div id="hydrantsinfo"></div>
+		<b>at<b>
+		<div id='addressinfo'><div>
+	</p>
 	<div id="observablehq-hydrantmap-dc9662cd"></div>
 
 	<script type="module">
