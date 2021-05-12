@@ -203,9 +203,10 @@
 	</p>
 	
 	</div>
+<div class="row">
+	<div class="column">
 	
-	<div id="observablehq-hydrantmap-dc9662cd">
-	<div id="observablehq-mapzoom-12afacaa"></div></div>
+	<div id="observablehq-hydrantmap-dc9662cd"></div>
 
 	<script type="module">
 	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -214,13 +215,18 @@
 	  if (name === "hydrantmap") return new Inspector(document.querySelector("#observablehq-hydrantmap-dc9662cd"));
 	});
 	</script>
-
+	</div>
+	<div class="column">
+	<div id="observablehq-mapzoom-12afacaa"></div>
+	
 	<script type="module">
 	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 	import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
 	new Runtime().module(define, name => {
 	  if (name === "mapzoom") return new Inspector(document.querySelector("#observablehq-mapzoom-12afacaa"));
 	});
-</script>
+	</script>
+	</div>
+</div>
 </body>
 </html>
