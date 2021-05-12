@@ -195,6 +195,7 @@
 		<b>Chart 6: Map of Lake County Public Works Water Department Fire Hydrants</b>
 	<br>The fire hydrants belonging to different water systems are distinguished by color.
 	<br>The fire hydrants' information is displayed by moving mouse.
+	<br>Zoom-and-Pan the map.
 	</p>
 	<p>
 		<b>You are selecting:</b>
@@ -214,5 +215,15 @@
 	  if (name === "hydrantmap") return new Inspector(document.querySelector("#observablehq-hydrantmap-dc9662cd"));
 	});
 	</script>
+	
+	<div id="observablehq-mapzoom-12afacaa"></div>
+
+	<script type="module">
+	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+	import define from "https://api.observablehq.com/@shuyi-liu/us-fire-stats.js?v=3";
+	new Runtime().module(define, name => {
+	  if (name === "mapzoom") return new Inspector(document.querySelector("#observablehq-mapzoom-12afacaa"));
+	});
+</script>
 </body>
 </html>
